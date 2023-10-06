@@ -2,9 +2,11 @@
 
 Ни на что рассчитывать не будем, но попробовать стоит.
 
+Пожалуйста, пиши побольше комментариев, чтобы я тоже мог понять.
+
 Задание см. в pdf файле.
 
-Файлы и пояснения см. на сайте Яндекс Контест
+Файлы и пояснения см. на сайте Яндекс Контест.
 
 Ссылочки:
 
@@ -15,4 +17,5 @@
 5. [Метрики в задачах машинного обучения](https://habr.com/ru/companies/ods/articles/328372/)
 6. [Feature Engineering](https://www.kaggle.com/learn/feature-engineering)
 7. [Data Visualization](https://www.kaggle.com/learn/data-visualization)
+8. [Телега AlfaHack](https://t.me/BalticAlfaHack)
 
