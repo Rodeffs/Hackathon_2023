@@ -1,0 +1,18 @@
+# Хакатон
+
+Ни на что рассчитывать не будем, но попробовать стоит.
+
+Задание см. в pdf файле.
+
+Файлы и пояснения см. на сайте Яндекс Контест
+
+Ссылочки:
+
+1. [Яндекс Контест](https://official.contest.yandex.ru/contest/52829/enter)
+2. [pandas](https://www.geeksforgeeks.org/how-to-print-an-entire-pandas-dataframe-in-python/)
+3. [AUC ROC](https://alexanderdyakonov.wordpress.com/2017/07/28/auc-roc-%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D1%8C-%D0%BF%D0%BE%D0%B4-%D0%BA%D1%80%D0%B8%D0%B2%D0%BE%D0%B9-%D0%BE%D1%88%D0%B8%D0%B1%D0%BE%D0%BA)
+4. [Comprehensive Guide on Feature Selection](https://www.kaggle.com/code/prashant111/comprehensive-guide-on-feature-selection)
+5. [Метрики в задачах машинного обучения](https://habr.com/ru/companies/ods/articles/328372/)
+6. [Feature Engineering](https://www.kaggle.com/learn/feature-engineering)
+7. [Data Visualization](https://www.kaggle.com/learn/data-visualization)
+
