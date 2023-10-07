@@ -7,19 +7,19 @@ from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
 
 # Загрузка датасета в формате parquet
-table = pq.read_table("train.parquet")
-data = table.to_pandas()
+train_data = pq.read_table("train.parquet").to_pandas()
+test_data = pq.read_table("test.parquet").to_pandas()
 
 # Обработка пропущенных значений
 imputer = SimpleImputer(strategy="mean")
-X = imputer.fit_transform(data.drop("total_target", axis=1))
+X = imputer.fit_transform(train_data.drop("total_target", axis=1))
 
 # Нормализация данных
 scaler = StandardScaler()
 X = scaler.fit_transform(X)
 
 # Разделение на признаки (X) и целевую переменную (y)
-y = data["total_target"]
+y = train_data["total_target"]
 
 # Разделение данных на тренировочный и тестовый наборы
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -32,7 +32,8 @@ model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
 
 # Создание DataFrame с идентификаторами клиентов и предсказанными значениями
-df_predictions = pd.DataFrame({'id': range(1, len(y_pred) + 1), 'score': y_pred}, columns=['id', 'score'])
+df_predictions = pd.DataFrame({'id': range(300000, len(y_pred) + 300000), 'score': y_pred}, columns=['id', 'score'])
 
 # Сохранение предсказаний в CSV файле
 df_predictions.to_csv('predictions.csv', index=False)
+print(df_predictions.last_valid_index)
