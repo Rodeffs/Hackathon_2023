@@ -7,7 +7,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
 
 # Загрузка датасета в формате parquet
-table = pq.read_table("train.parquet")
+table = pq.read_table("Data/train.parquet")
 data = table.to_pandas()
 
 # Обработка пропущенных значений
