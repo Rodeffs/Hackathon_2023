@@ -6,20 +6,24 @@ from sklearn.metrics import roc_auc_score
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
 
-# Загрузка датасета в формате parquet
-table = pq.read_table("train.parquet")
-data = table.to_pandas()
+# Загрузка датасета train в формате parquet
+train_table = pq.read_table("train.parquet")
+train_data = train_table.to_pandas()
+
+# Загрузка датесета test
+test_table = pq.read_table("test.parquet")
+test_data = test_table.to_pandas()
 
 # Обработка пропущенных значений
 imputer = SimpleImputer(strategy="mean")
-X = imputer.fit_transform(data.drop("total_target", axis=1))
+X = imputer.fit_transform(test_data.drop("total_target", axis=1))
 
 # Нормализация данных
 scaler = StandardScaler()
 X = scaler.fit_transform(X)
 
 # Разделение на признаки (X) и целевую переменную (y)
-y = data["total_target"]
+y = train_data["total_target"]
 
 # Разделение данных на тренировочный и тестовый наборы
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
